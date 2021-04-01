@@ -14,7 +14,7 @@ class LanguageFile
                 mkdir('lang/' . $locale, 0777, true);
             }
 
-            $translations = self::undot($dotted);
+            $translations = self::undot(array_filter($dotted));
             $files = array_keys($translations);
 
             foreach ($files as $file) {
