@@ -30,6 +30,13 @@
             "GhostZero\\I18n\\Tests\\": "tests/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GhostZero\\I18n\\I18nServiceProvider"
+            ]
+        }
+    },
     "config": {
         "sort-packages": true
     }
