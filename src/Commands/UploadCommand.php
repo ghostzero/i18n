@@ -45,10 +45,10 @@ class UploadCommand extends Command
     {
         $files = [];
 
-        App::setLocale($locale = $this->argument('locale'));
+        $locale = $this->argument('locale');
 
         foreach (config('i18n.files') as $file) {
-            $files[$file] = Lang::get($file);
+            $files[$file] = Lang::get($file, [], $locale, false);
         }
 
         return [$files, $locale];
